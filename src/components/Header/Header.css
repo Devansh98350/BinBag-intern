@@ -1,0 +1,119 @@
+/*For row 1 in header*/
+
+.row1 {
+  height: 72px;
+}
+.container-fluid {
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-col1,
+.header-col2,
+.header-col3 {
+  display: flex;
+  align-items: center;
+}
+.header-col1 img {
+  max-width: 100%; /* Ensure the image doesn't exceed the container width */
+  height: 72px; /* Maintain aspect ratio */
+}
+
+.navbar-brand {
+  width: 330px;
+  height: auto;
+}
+
+/* Header Styling */
+.header {
+  width: 100%;
+}
+
+/* For Row 2 */
+
+.row2 {
+  height: 72px;
+
+  width: 100%;
+}
+.navbar {
+  padding: 0px;
+}
+
+.navbar-toggler {
+  border: none;
+  background-color: transparent;
+  color: white;
+  font-size: 18px;
+}
+
+/* Navbar Links Styling */
+.navbar-nav {
+  font-size: 20px;
+  font-family: comforta;
+  font-weight: bold;
+}
+
+.nav-link {
+  margin-right: 25px;
+}
+
+/* Active Link Styling */
+.nav-link.active {
+  font-weight: bold;
+}
+
+/* Dropdown Styling */
+.dropdown-menu {
+  background-color: white;
+}
+
+.hover:hover .dropdown-menu {
+  display: block;
+  width: auto;
+  text-decoration: none;
+}
+
+.dropdown-item {
+  color: black !important;
+  font-size: 18px;
+  /* padding: 8px 15px; */
+}
+
+.navbar-toggler {
+  color: white;
+  /* font-weight: bold; */
+  font-size: 40px;
+}
+/* Hamburger Menu Styling */
+.navbar-toggler-icon {
+  font-size: 25px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+  .row1 {
+    height: 80px;
+  }
+
+  .header-col1 img {
+    margin-top: 5px;
+    margin-left: 16%;
+  }
+
+  .navbar-nav {
+    text-align: left;
+  }
+
+  .navbar-nav .nav-item {
+    margin-right: 0;
+    margin-bottom: -10px;
+    display: block;
+  }
+
+  .nav-link {
+    margin: 10px;
+  }
+}
