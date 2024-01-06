@@ -80,7 +80,6 @@ const Admin = () => {
   );
 };
 
-// Inline CSS styles
 const tableHeaderStyle = {
   backgroundColor: "#eee",
   padding: "10px",

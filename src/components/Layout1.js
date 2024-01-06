@@ -4,7 +4,7 @@ import Header1 from "../components/Header/Header1.js";
 import Footer from "../components/Footer/Footer.js";
 import { Helmet } from "react-helmet";
 
-const Layout = ({ children, title, description, keywords, author }) => {
+const Layout1 = ({ children, title, description, keywords, author }) => {
   return (
     <div>
       <Helmet>
@@ -23,11 +23,11 @@ const Layout = ({ children, title, description, keywords, author }) => {
   );
 };
 
-Layout.defaultProps = {
+Layout1.defaultProps = {
   title: "BinBag Intern Task",
   description: "Assignment",
   keywords: "ReactJs",
   author: "Devanshu Kumar",
 };
 
-export default Layout;
+export default Layout1;

@@ -9,13 +9,7 @@ import "./Header.css";
 
 const Header = (props) => {
   const navigate = useNavigate();
-  // const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-  // const toggleMobileMenu = () => {
-  //   setMobileMenuOpen(!isMobileMenuOpen);
-  // };
   const handleLogout = () => {
-    // Handle logout logic here
     alert("Employee Logged Out Successfully");
     navigate("/");
     document.title = "Binbag - Internship";

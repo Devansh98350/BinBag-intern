@@ -18,11 +18,9 @@ const Reimbursements = () => {
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
     if (name === "amount" && !/^\d*$/g.test(value)) {
-      // If non-numeric characters are entered, do not update state
       return;
     }
     setFormData((prevData) => {
-      // Handle checkbox values
       if (type === "checkbox") {
         const updatedOutOfPocketExpense = checked
           ? [...prevData.outOfPocketExpense, name]
@@ -58,29 +56,23 @@ const Reimbursements = () => {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    // Validation
     const newErrors = {};
     if (!formData.date) {
       newErrors.date = "Date is required";
       alert("Date is required");
     }
-
     if (!formData.amount || isNaN(parseFloat(formData.amount))) {
       newErrors.amount = "Valid amount is required";
       alert("Valid amount is required");
     }
-
     if (!formData.paymentType) {
       newErrors.paymentType = "Payment type is required";
       alert("Payment type is required");
     }
-
     if (formData.outOfPocketExpense.length === 0) {
       newErrors.outOfPocketExpense = "Select at least one expense type";
       alert("Select at least one expense type");
     }
-
     if (
       formData.outOfPocketExpense.includes("Material Transportation") &&
       !formData.materialTransportation
@@ -89,20 +81,15 @@ const Reimbursements = () => {
         "Material Transportation details are required";
       alert("Material Transportation details are required");
     }
-
     if (formData.outOfPocketExpense.includes("Other") && !formData.other) {
       newErrors.other = "Other details are required";
       alert("Other details are required");
     }
-
     if (!formData.raisedBy) {
       newErrors.raisedBy = "Raised by is required";
       alert("Raised by is required");
     }
-
     setErrors(newErrors);
-
-    // If there are no errors, you can submit the form data or perform further actions
     if (Object.keys(newErrors).length === 0) {
       console.log("Form submitted:", formData);
       alert("Reimbursement Form Submitted Successfully");
@@ -217,7 +204,6 @@ const Reimbursements = () => {
               <option value="">Select Employee</option>
               <option value="Employee1">Employee 1</option>
               <option value="Employee2">Employee 2</option>
-              {/* Add more employee options as needed */}
             </select>
             <div className="error">{errors.raisedBy}</div>
           </div1>

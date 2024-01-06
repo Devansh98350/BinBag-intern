@@ -4,9 +4,6 @@ import logo from "../../assests/photo.webp";
 import design from "../../assests/design.webp";
 
 const Homepage = () => {
-  // useEffect(() => {
-  //   window.scrollTo(0, 0);
-  // }, []);
   return (
     <Layout title="Binbag - Internship Task">
       <div className="photo" style={{ width: "98.79vw", height: "100%" }}>
@@ -53,7 +50,6 @@ const Homepage = () => {
               left: "11%",
               right: "40%",
               fontSize: "23px",
-              // transform: "translate(-50%, -50%)",
               color: "white",
               textAlign: "left",
             }}
